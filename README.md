@@ -43,6 +43,7 @@ run `sh demo.sh`
 | rap | 66.69 | 84.66 | 90.35 | 92.38 | 94.45 |
 
 Download model file (fine-tuned on market1501) in [here](https://pan.baidu.com/s/1DbZsT16yIITTkmjRW1ifWQ).
+
 Download model file (fine-tuned on RAP) in [here](https://pan.baidu.com/s/1hOlJWi1pfiB-_LNjki0uug), password: ysx8 .
 
 ## The architecture of Multiple Granularity Network (MGN)
