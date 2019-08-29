@@ -1,12 +1,38 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
 import os
-import re
+import os.path as osp
+import pickle
 
-def list_pictures(directory, ext='jpg|jpeg|bmp|png|ppm'):
-    assert os.path.isdir(directory), 'dataset is not exists!{}'.format(directory)
+import numpy as np
 
-    return sorted([os.path.join(root, f)
-                   for root, _, files in os.walk(directory) for f in files
-                   if re.match(r'([\w]+\.(?:' + ext + '))', f)])
+def loadPickle(path):
 
+    """
+    Check and load pickle object.
+    """
+    assert osp.exists(path)
+    with open(path, 'rb') as f:
+        ret = pickle.load(f)
+    return ret
+
+# For test
+def test(fname):
+    data = loadPickle(fname)
+    #print(data['test_marks'])
+    #print(data.keys())
+    marks = np.asarray(data['test_marks'])
+    qinds = marks == 0
+    ginds = marks == 1
+    print(marks[qinds].shape)
+    print(np.sum(marks[ginds]))
+    #im_names = data['trainval_im_names']
+    #print(im_names[1])
+    #file_path = im_names[1]
+    #print(int(file_path.split('/')[-1].split('_')[1]))
+
+import sys
+if __name__ == '__main__':
+    fname = sys.argv[1]
+    test(fname)

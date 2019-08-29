@@ -32,7 +32,7 @@ class Trainer():
     def train(self):
         self.scheduler.step()
         self.loss.step()
-        epoch = self.scheduler.last_epoch + 1
+        epoch = self.scheduler.last_epoch
         lr = self.scheduler.get_lr()[0]
         if lr != self.lr:
             self.ckpt.write_log('[INFO] Epoch: {}\tLearning rate: {:.2e}'.format(epoch, lr))
@@ -59,7 +59,7 @@ class Trainer():
         self.loss.end_log(len(self.train_loader))
 
     def test(self):
-        epoch = self.scheduler.last_epoch + 1
+        epoch = self.scheduler.last_epoch
         self.ckpt.write_log('\n[INFO] Test:')
         self.model.eval()
 
@@ -125,5 +125,5 @@ class Trainer():
             return True
         else:
             epoch = self.scheduler.last_epoch + 1
-            return epoch >= self.args.epochs
+            return epoch > self.args.epochs
 

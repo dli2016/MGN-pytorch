@@ -48,3 +48,6 @@
 
 #0.9383 rank1: 0.9578 rank3: 0.9721 rank5: 0.9783 rank10: 0.9843 (Best: 0.9383 @epoch 400)
 #CUDA_VISIBLE_DEVICES=2,3 python3 main.py --datadir ../reid-mgn/Market-1501-v15.09.15/ --batchid 16 --batchtest 32 --test_every 50 --epochs 400 --decay_type step_320_380 --loss 1*CrossEntropy+2*Triplet --margin 1.2 --save adam_1 --nGPU 2  --lr 2e-4 --optimizer ADAM --random_erasing --reset --re_rank --amsgrad
+
+
+CUDA_VISIBLE_DEVICES=2,3 python3 main.py --datadir ../reid-mgn --data_train rap2 --data_test rap2 --num_classes 1295 --batchid 16 --batchtest 32 --test_every 100 --epochs 400 --decay_type step_320_380 --loss 1*CrossEntropy+2*Triplet --margin 1.2 --save adam_1 --nGPU 2  --lr 2e-4 --optimizer ADAM --random_erasing --reset --amsgrad
