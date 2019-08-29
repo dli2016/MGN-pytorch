@@ -7,7 +7,7 @@ Reproduction of paper:[Learning Discriminative Features with Multiple Granularit
 - [Market1501](http://www.liangzheng.org/Project/project_reid.html)
 
 ## Differences
-- The training datasets should be orgnized with the format of [person-reid-triplet-loss-baseline](https://github.com/huanghoujing/person-reid-triplet-loss-baseline)
+- The training datasets should be organized with the format of [person-reid-triplet-loss-baseline](https://github.com/huanghoujing/person-reid-triplet-loss-baseline)
 - All the datasets (e.g., rap, market1501, and so on) met the above format can be utilized to train a MGN model.
 
 ## Dependencies
