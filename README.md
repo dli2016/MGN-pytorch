@@ -31,7 +31,7 @@ Download Market1501 training data.[here](http://www.liangzheng.org/Project/proje
 
 ### Begin to train
 
-In the demo.sh file, add the Market1501 directory to --datadir
+In the demo.sh file, add the dataset directory to --datadir
 
 run `sh demo.sh`
 
@@ -44,6 +44,7 @@ run `sh demo.sh`
 
 Download model file (fine-tuned on market1501) in [here](https://pan.baidu.com/s/1DbZsT16yIITTkmjRW1ifWQ)
 
+Download model file (fine-tuned on RAP) in [here](https://pan.baidu.com/s/1hOlJWi1pfiB-_LNjki0uug), password: ysx8 .
 
 ## The architecture of Multiple Granularity Network (MGN)
 ![Multiple Granularity Network](https://pic2.zhimg.com/80/v2-90a8763a0b7aa86d9152492eb3f85899_hd.jpg)
